@@ -8,11 +8,11 @@
 </head>
 <body>
 
-<header class="site-header">
+<header class="topbar">
   <div class="container">
     <div class="brand">
-      <h1 class="title">Endalkachew Abebe Kebede</h1>
-      <p class="subtitle">Water–Food–Energy Nexus</p>
+      <h1 class="name">Endalkachew Abebe Kebede</h1>
+      <p class="tag">Water–Food–Energy Nexus</p>
     </div>
     <nav class="nav">
       <a href="index.html">Home</a>
@@ -28,39 +28,43 @@
 <main class="container page">
   <h2>Teaching</h2>
   <p>
-    I teach quantitative and geospatial approaches for environmental problem-solving, including GIS,
-    spatial analysis, hydrology, irrigation engineering, and natural resource management.
+    I teach quantitative and geospatial approaches for environmental problem-solving, with an emphasis on
+    reproducible analysis, hands-on learning, and connecting methods to real-world water and food challenges.
   </p>
 
-  <div class="card">
-    <h3>Courses taught (from CV)</h3>
-    <ul class="list-clean">
-      <li><strong>University of Delaware (Winter 2025)</strong>: GEOG 271 – Introduction to Geographic Data Analysis :contentReference[oaicite:21]{index=21}</li>
-      <li><strong>Debre Tabor University (2017–2022)</strong>: Soil and Water Conservation; Introduction to Natural Resource Management :contentReference[oaicite:22]{index=22}</li>
-      <li><strong>Woldia University (2012–2017)</strong>: Surface and Ground Water Hydrology; GIS and Remote Sensing; Research Method and Experimental Design; Irrigation Engineering; Farm Machinery; Soil Physics; Introductory Soils :contentReference[oaicite:23]{index=23}</li>
-      <li><strong>Bahir Dar Polytechnic College (2010–2012)</strong>: Design of Water Supply System Structures and Construction; Design and Operations of Irrigation Structures :contentReference[oaicite:24]{index=24}</li>
-    </ul>
-  </div>
+  <div class="grid">
+    <section class="card col-6">
+      <h3>Teaching focus</h3>
+      <ul class="list">
+        <li>Geospatial analysis &amp; GIS workflows</li>
+        <li>Hydrology, irrigation engineering, and water resources</li>
+        <li>Environmental data analysis and reproducibility</li>
+        <li>Applied learning through real datasets and case studies</li>
+      </ul>
+    </section>
 
-  <hr class="sep"/>
+    <section class="card col-6 soft">
+      <h3>Current / recent</h3>
+      <p><strong>University of Delaware (Winter 2025)</strong></p>
+      <ul class="list">
+        <li>GEOG 271 — Introduction to Geographic Data Analysis (Instructor of Record)</li>
+      </ul>
+    </section>
 
-  <div class="card">
-    <h3>Instructor roles</h3>
-    <ul class="list-clean">
-      <li>Instructor of Record, University of Delaware (Winter 2025) :contentReference[oaicite:25]{index=25}</li>
-      <li>Researcher &amp; Lecturer, Debre Tabor University (2017–2019) :contentReference[oaicite:26]{index=26}</li>
-      <li>Lecturer, Woldia University (2012–2017) :contentReference[oaicite:27]{index=27}</li>
-      <li>Instructor, Bahir Dar Polytechnic College (2010–2012) :contentReference[oaicite:28]{index=28}</li>
-    </ul>
+    <section class="card col-12">
+      <h3>Courses taught</h3>
+      <ul class="list">
+        <li><strong>Debre Tabor University (2017–2022):</strong> Soil and Water Conservation; Introduction to Natural Resource Management</li>
+        <li><strong>Woldia University (2012–2017):</strong> Surface and Ground Water Hydrology; GIS and Remote Sensing; Research Method and Experimental Design; Irrigation Engineering; Farm Machinery; Soil Physics; Introductory Soils</li>
+        <li><strong>Bahir Dar Polytechnic College (2010–2012):</strong> Design of Water Supply System Structures and Construction; Design and Operations of Irrigation Structures</li>
+      </ul>
+    </section>
   </div>
 </main>
 
 <footer class="footer">
   <div class="container">© <span id="y"></span> Endalkachew Abebe Kebede</div>
 </footer>
-
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
