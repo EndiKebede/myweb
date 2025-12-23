@@ -249,3 +249,51 @@ a:hover{text-decoration:underline}
   color:var(--muted);
   font-size:13px;
 }
+/* --- Research media blocks --- */
+.media-block {
+  margin: 18px 0 8px 0;
+  padding: 0;
+}
+.media-block img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  border: 1px solid rgba(20, 30, 50, 0.08);
+  box-shadow: 0 10px 30px rgba(20, 30, 50, 0.08);
+}
+.media-block figcaption {
+  font-size: 0.95rem;
+  color: rgba(20, 30, 50, 0.7);
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* --- Publications formatting --- */
+.year {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+.pub-list {
+  line-height: 1.6;
+}
+.quick-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 14px 0 22px 0;
+}
+.pill {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(50, 90, 160, 0.08);
+  text-decoration: none;
+}
+.pill:hover {
+  background: rgba(50, 90, 160, 0.14);
+}
+
