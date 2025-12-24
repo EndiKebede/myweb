@@ -6,7 +6,9 @@
   --card:#ffffff;
   --shadow:0 8px 30px rgba(2,6,23,.08);
   --radius:16px;
-  --max:1100px;
+
+  /* Give a bit more room so the 3-col layout feels less tight */
+  --max:1240px; /* was 1100px */
 
   /* Text column width (controls paragraph + figure width inside cards) */
   --textcol:72ch;  /* try 66ch for narrower; 78ch for wider */
@@ -194,18 +196,44 @@ a:hover{text-decoration:underline}
   display:grid;
   gap:16px;
 }
+
 .grid.two{
   grid-template-columns:1.1fr .9fr;
 }
 @media (max-width:900px){
   .grid.two{grid-template-columns:1fr}
 }
+
+/* HOME 3-COLUMN LAYOUT:
+   1st card (Welcome) spans 2 columns
+   2nd column = Experience card
+   3rd column = Quick links card
+*/
 .grid.three{
-  grid-template-columns: 1.1fr .9fr 1fr;
+  grid-template-columns: 1.35fr 1fr 1fr;
   align-items:start;
 }
+
+/* Make ONLY the first card (Welcome) wider by spanning 2 columns */
+.grid.three > .card:first-child{
+  grid-column: 1 / span 2;
+}
+
+/* Ensure the 2nd card sits in column 2, and 3rd card in column 3 */
+.grid.three > .card:nth-child(2){
+  grid-column: 2;
+}
+.grid.three > .card:nth-child(3){
+  grid-column: 3;
+}
+
 @media (max-width: 1100px){
   .grid.three{grid-template-columns:1fr}
+  .grid.three > .card:first-child,
+  .grid.three > .card:nth-child(2),
+  .grid.three > .card:nth-child(3){
+    grid-column:auto;
+  }
 }
 
 /* ================= PROFILE ================= */
@@ -326,4 +354,3 @@ a:hover{text-decoration:underline}
   color:var(--muted);
   font-size:13px;
 }
-
