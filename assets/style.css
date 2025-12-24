@@ -8,13 +8,8 @@
   --radius:16px;
   --max:1100px;
 
-  /* Controls readable line-length inside cards */
-  --textcol:78ch;
-
-  /* Home grid column sizing */
-  --homecol1: 1.6fr;  /* Welcome (wider) */
-  --homecol2: 1fr;    /* Experience */
-  --homecol3: 1fr;    /* Quick links */
+  /* Text column width (controls paragraph + figure width inside cards) */
+  --textcol:72ch;
 }
 
 *{box-sizing:border-box}
@@ -47,6 +42,7 @@ a:hover{text-decoration:underline}
   backdrop-filter:saturate(1.2) blur(10px);
   border-bottom:1px solid var(--line);
 }
+
 .header-inner{
   display:flex;
   align-items:center;
@@ -54,9 +50,21 @@ a:hover{text-decoration:underline}
   gap:18px;
   padding:14px 0;
 }
-.brand{display:flex; flex-direction:column; gap:2px;}
-.brand .name{font-weight:800; font-size:18px; letter-spacing:.2px;}
-.brand .tag{font-size:13px; color:var(--muted);}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.brand .name{
+  font-weight:800;
+  font-size:18px;
+  letter-spacing:.2px;
+}
+.brand .tag{
+  font-size:13px;
+  color:var(--muted);
+}
 
 .nav{
   display:flex;
@@ -87,6 +95,7 @@ a:hover{text-decoration:underline}
   display:flex;
   align-items:flex-end;
 }
+
 .hero::before{
   content:"";
   position:absolute;
@@ -98,22 +107,26 @@ a:hover{text-decoration:underline}
   background-position:center;
   transform:scale(1.02);
 }
+
 .hero .hero-inner{
   position:relative;
   padding:48px 0 36px;
   color:white;
 }
+
 .hero h1{
   margin:0 0 8px;
   font-size:42px;
   line-height:1.15;
 }
+
 .hero p{
   margin:0;
   max-width:70ch;
   color:rgba(255,255,255,.92);
   font-size:16px;
 }
+
 .hero .hero-actions{
   margin-top:18px;
   display:flex;
@@ -145,6 +158,11 @@ a:hover{text-decoration:underline}
 /* ================= MAIN ================= */
 .main{padding:28px 0 48px}
 
+.page-title{
+  margin:0 0 12px;
+  font-size:34px;
+}
+
 .lede{
   margin:0 0 18px;
   color:var(--muted);
@@ -158,9 +176,10 @@ a:hover{text-decoration:underline}
   border-radius:var(--radius);
   box-shadow:var(--shadow);
   padding:26px 28px;
+  margin-bottom:20px;
 }
 
-/* Readable line-length inside cards */
+/* Readable column inside any card */
 .card p,
 .card ul,
 .card ol,
@@ -169,49 +188,16 @@ a:hover{text-decoration:underline}
   max-width: var(--textcol);
 }
 
-.hr{
-  height:1px;
-  background:var(--line);
-  margin:18px 0;
-}
+/* ================= GRID ================= */
+.grid{display:grid; gap:16px}
 
-/* ================= HOME GRID (FIX ALIGNMENT) ================= */
-.grid{
-  display:grid;
-  gap:16px;
-}
-
-/* One shared grid for alignment */
-.home-grid{
-  grid-template-columns: var(--homecol1) var(--homecol2) var(--homecol3);
+/* home: 3 columns (Welcome wider than others) */
+.grid.home{
+  grid-template-columns: 1.6fr 1fr 1fr;
   align-items:start;
 }
-
-/* Welcome spans first two columns, so it’s wider */
-.card-wide{
-  grid-column: 1 / span 2;
-}
-
-/* Put Experience specifically in column 2 (row auto) */
-.home-grid > section.card:not(.card-wide){
-  grid-column: 2;
-}
-
-/* Quick links stays in column 3 naturally */
-.home-grid > aside.card{
-  grid-column: 3;
-}
-
-/* Responsive: stack nicely */
 @media (max-width: 1100px){
-  .home-grid{
-    grid-template-columns: 1fr;
-  }
-  .card-wide,
-  .home-grid > section.card:not(.card-wide),
-  .home-grid > aside.card{
-    grid-column: auto;
-  }
+  .grid.home{grid-template-columns:1fr}
 }
 
 /* ================= PROFILE ================= */
@@ -239,6 +225,7 @@ a:hover{text-decoration:underline}
   gap:8px;
   margin-top:10px;
 }
+
 .pill{
   display:inline-flex;
   align-items:center;
@@ -250,13 +237,70 @@ a:hover{text-decoration:underline}
   font-weight:700;
   font-size:13px;
 }
-.pill:hover{background:#eef2ff; text-decoration:none}
+.pill:hover{
+  background:#eef2ff;
+  text-decoration:none;
+}
+
+/* ================= RESEARCH MEDIA (FIXED: MATCH TEXT WIDTH) ================= */
+/* Always center media and lock to text width */
+.media-block{
+  max-width: var(--textcol);
+  margin: 22px auto;
+}
+
+/* Any media inside wrapper stays within wrapper */
+.media-block img,
+.media-block video,
+.media-block iframe{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  border-radius:12px;
+  border:1px solid rgba(20,30,50,.08);
+  box-shadow:0 6px 18px rgba(20,30,50,.08);
+}
+
+.media-block figcaption{
+  margin-top:8px;
+  font-size:0.9rem;
+  color:rgba(20,30,50,.65);
+  line-height:1.5;
+}
+
+/* SAFETY NET: images in cards never exceed text width (except profile photo) */
+.card img:not(.profile img){
+  max-width: var(--textcol);
+  height:auto;
+}
 
 /* ================= LISTS ================= */
-.list{margin:0; padding-left:18px;}
+.list{
+  margin:0;
+  padding-left:18px;
+}
 .list li{margin:8px 0}
 
 .small{font-size:14px;color:var(--muted)}
+
+/* ================= PUBLICATIONS ================= */
+.year{
+  margin-top:18px;
+  margin-bottom:8px;
+  font-size:1.15rem;
+}
+.pub-list{
+  line-height:1.6;
+  padding-left:20px;
+}
+
+.quick-links{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:14px 0 22px 0;
+}
 
 /* ================= FOOTER ================= */
 .footer{
