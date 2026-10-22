@@ -2,89 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research | Endalkachew Abebe Kebede</title>
-  <meta name="description" content="Research agenda of Endalkachew Abebe Kebede: irrigation dynamics, global water scarcity, and food sustainability." />
-
+  <meta name="description" content="Research by Endalkachew Abebe Kebede on irrigation dynamics, water scarcity, open food-production data, and climate impacts on river systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <div class="name">Endalkachew Abebe Kebede</div>
-      <div class="tag">Water–Food–Energy Nexus</div>
-    </div>
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Endalkachew Abebe Kebede</a>
     <nav class="nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a class="active" href="research.html">Research</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="publications.html">Publications &amp; Presentations</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="publications.html">Publications</a>
       <a href="datasets.html">Datasets</a>
+      <a href="teaching.html">Teaching</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
+<div class="fields fields--strip" role="presentation"></div>
 
-<main class="main">
-  <div class="container">
+<main id="main" class="wrap">
+  <header class="page-head">
+    <h1>Research</h1>
+    <p>I study irrigation dynamics, water scarcity, and competition for water under climate and socioeconomic change. My work combines AI-enabled remote sensing, hydrologic and crop–water modeling, and geospatial analysis to find practical pathways toward sustainable water and food systems.</p>
+  </header>
 
-    <h1 class="page-title">Research</h1>
-    <p class="lede">
-      My research focuses on irrigation dynamics, water scarcity, and sectoral water competition under climate and socioeconomic change.
-      It integrates AI-enabled remote sensing, hydrologic &amp; crop–water modeling, and geospatial analysis to support decision-relevant
-      pathways for sustainable water and food systems.
-    </p>
-
-    <!-- 1 -->
-    <section class="card">
-      <h2>1) How do fine-scale irrigation dynamics shape environmental sustainability under climate stress?</h2>
-
-      <p>
-        Irrigated agriculture, covering only 24% of croplands yet producing 40% of global food, remains the largest consumer of freshwater 
-        and a key driver of aquifer and surface water depletion. Despite its central role in food security and sustainability, existing irrigation 
-        datasets are coarse in resolution and overlook smallholder regions, limiting their use in precision agriculture and water management.
-        My research agenda aims to advance fine-scale global irrigation mapping by extending coverage across the 21st century (2000–present) and 
-        incorporating seasonal irrigation dynamics. Building on these fine-scale data, I aim to assess the sustainability tradeoffs of food production. 
-        The ultimate goal is to provide decision-relevant tools that connect irrigation management to measurable
-        outcomes in water availability and ecosystem resilience.
-      </p>
-
-      <figure class="media-block">
-        <img src="Maize.gif" alt="Monthly maize harvested area (animation)">
-        <figcaption>Monthly maize harvested area (MIRCA-OS).</figcaption>
+  <section class="index" aria-labelledby="t1">
+    <h2>Irrigation dynamics</h2>
+    <div class="body theme">
+      <h3 id="t1">How do fine-scale irrigation dynamics shape environmental sustainability under climate stress?</h3>
+      <p>Irrigated agriculture covers only 24% of cropland yet produces 40% of the world’s food. It is the largest consumer of freshwater and a key driver of aquifer and surface-water depletion. Existing irrigation datasets are coarse and overlook smallholder regions, which limits their use in precision agriculture and water management.</p>
+      <p>I build fine-scale global irrigation maps that span the 21st century (2000 to present) and capture seasonal dynamics, including <a href="datasets.html">MIRCA-OS, GMIA-NEXT, and AEI</a>. On top of these data I assess the sustainability tradeoffs of food production, with the goal of tools that connect irrigation management to measurable outcomes in water availability and ecosystem resilience.</p>
+      <figure>
+        <img src="Maize.gif" alt="Animated world map of monthly maize harvested area" width="1192" height="853" loading="lazy" />
+        <figcaption>Monthly maize harvested area from MIRCA-OS.</figcaption>
       </figure>
-    </section>
-    <!-- 3 -->
-    <section class="card">
-      <h2>2) How does climate change alter water resources and river systems under growing human pressures?</h2>
+    </div>
+  </section>
 
-      <p>
-        Climate change is fundamentally altering hydrological regimes through shifts in temperature, precipitation, river discharge, and sediment dynamics, 
-        intensifying pressures on water availability, flood risk, and ecosystem stability—particularly in data-scarce river basins of sub-Saharan Africa, 
-        where urban growth, agriculture, and hydraulic infrastructure compound climate stress. This research integrates climate impact assessment, 
-        hydrological model uncertainty, and river morphological analysis by combining statistically downscaled regional climate projections 
-        with multi-model hydrological simulations and one-dimensional morphological modeling. By aggregating ensemble 
-        climate scenarios and linking altered flow regimes to channel and delta responses using remote sensing and geomorphological analysis, 
-        the work provides a robust, integrated framework for understanding climate–human interactions in river systems and supports adaptive, 
-        evidence-based water resource management.
-      </p>
-
-      <figure class="media-block">
-        <img src="Comp.png" alt="Conceptual diagram illustrating water competition between sectors">
-        <figcaption>Illustration of sectoral water competition under climate stress and urban expansion.</figcaption>
+  <section class="index" aria-labelledby="t2">
+    <h2>Water scarcity and food</h2>
+    <div class="body theme">
+      <h3 id="t2">Where does rising water scarcity put food production and supply at risk?</h3>
+      <p>Combining monthly crop and irrigation data with water availability lets me trace when and where farms run short of water, and how those local shortfalls ripple into global food supply. Related work looks at how water saved through efficiency gains could be reinvested to raise U.S. food production.</p>
+      <figure>
+        <img src="assets/water-scarcity-map.jpg" alt="World map showing the number of water-scarce months per year, highest across North Africa, the Middle East, South Asia, northern China, and the western United States" width="1600" height="1008" loading="lazy" />
+        <figcaption>Number of water-scarce months per year.</figcaption>
       </figure>
-    </section>
+    </div>
+  </section>
 
-  </div>
+  <section class="index" aria-labelledby="t3">
+    <h2>Open data and policy</h2>
+    <div class="body theme">
+      <h3 id="t3">What data and incentives do we need to manage agriculture sustainably?</h3>
+      <p>Much of the world’s food production goes unmeasured at the scales where decisions are made. I have assessed the global state of food production data scarcity and contribute to HarvestStat, which harmonizes subnational crop statistics, starting with Sub-Saharan Africa. I also study how conservation policy can be targeted, for example by optimizing cropland conservation payments to reduce nitrogen surplus in the Mississippi River Basin.</p>
+      <p><a href="publications.html">See the related publications</a>.</p>
+    </div>
+  </section>
+
+  <section class="index" aria-labelledby="t4">
+    <h2>Climate and rivers</h2>
+    <div class="body theme">
+      <h3 id="t4">How does climate change alter water resources and river systems under growing human pressure?</h3>
+      <p>Climate change is shifting temperature, precipitation, river discharge, and sediment dynamics, increasing pressure on water availability, flood risk, and ecosystem stability. The effects are sharpest in data-scarce river basins of Sub-Saharan Africa, where urban growth, agriculture, and hydraulic infrastructure add to climate stress.</p>
+      <p>This work combines statistically downscaled regional climate projections with multi-model hydrological simulations and one-dimensional morphological modeling. By linking altered flow regimes to channel and delta responses through remote sensing and geomorphological analysis, it offers an integrated way to understand climate–human interactions in rivers and to support adaptive water management.</p>
+      <figure>
+        <img src="assets/water-competition.jpg" alt="Illustrated landscape showing climate pressures on water and agriculture: snow drought, urban expansion, production loss, drier soils, groundwater use, food security risks, extreme heat, and drought" width="1600" height="924" loading="lazy" />
+        <figcaption>Competition for water between sectors under climate stress and urban expansion. Illustration from the Fifth National Climate Assessment, Chapter 28.</figcaption>
+      </figure>
+    </div>
+  </section>
 </main>
 
-<footer class="footer">
-  <div class="container">© 2026 Endalkachew Abebe Kebede</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Endalkachew Abebe Kebede</span>
+    <span><a href="mailto:endiabe@udel.edu">endiabe@udel.edu</a></span>
+  </div>
 </footer>
-
 </body>
 </html>

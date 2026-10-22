@@ -3,129 +3,80 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Datasets | Endalkachew Abebe Kebede</title>
   <meta name="description" content="Open environmental datasets developed and contributed to by Endalkachew Abebe Kebede, including MIRCA-OS, GMIA-NEXT, Area Equipped for Irrigation (AEI), HarvestStat Africa, and irrigation dam datasets." />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <div class="name">Endalkachew Abebe Kebede</div>
-      <div class="tag">Water–Food–Energy Nexus</div>
-    </div>
-
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Endalkachew Abebe Kebede</a>
     <nav class="nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="datasets.html" aria-current="page">Datasets</a>
       <a href="teaching.html">Teaching</a>
-      <a href="publications.html">Publications &amp; Presentations</a>
-      <a class="active" href="datasets.html">Datasets</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
+<div class="fields fields--strip" role="presentation"></div>
 
-<main class="main">
-  <div class="container">
+<main id="main" class="wrap">
+  <header class="page-head">
+    <h1>Datasets</h1>
+    <p>Open datasets I have built or contributed to for research on irrigation, agriculture, water resources, and food security. All are free to use for research and operational work.</p>
+  </header>
 
-    <h1 class="page-title">Datasets</h1>
-
-    <p class="lede">
-      I develop and contribute to open environmental datasets that support research on irrigation, agriculture, water resources, food security, and global sustainability. All datasets are openly available for research and operational applications.
-    </p>
-
-    <div class="grid">
-
-      <div class="card">
-        <h2>MIRCA-OS</h2>
-
-        <p class="lede" style="margin:0;">
-          A global open-source dataset providing monthly irrigated and rainfed cropped areas throughout the 21st century.
-        </p>
-
-        <p style="margin:10px 0 0;">
-          Resource:
-          <a href="https://www.hydroshare.org/resource/60a890eb841c460192c03bb590687145/" target="_blank" rel="noopener">
-            HydroShare (MIRCA-OS)
-          </a>
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>GMIA-NEXT</h2>
-
-        <p class="lede" style="margin:0;">
-          Next-Generation Global Map of Irrigated Areas (GMIA-NEXT) at 30 m spatial resolution, providing global irrigation probability and binary irrigation maps for the 2023/24 growing season.
-        </p>
-
-        <p style="margin:10px 0 0;">
-          Resource:
-          <a href="https://zenodo.org/records/17627111" target="_blank" rel="noopener">
-            Zenodo (GMIA-NEXT)
-          </a>
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>AEI (Area Equipped for Irrigation)</h2>
-
-        <p class="lede" style="margin:0;">
-          Global Area Equipped for Irrigation (AEI), providing annual irrigation extent from 2000 onward.
-        </p>
-
-        <p style="margin:10px 0 0;">
-          Resource:
-          <a href="https://zenodo.org/records/17766364" target="_blank" rel="noopener">
-            Zenodo (AEI)
-          </a>
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Dam Irrigation Expansion</h2>
-
-        <p class="lede" style="margin:0;">
-          Dataset accompanying the study <em>Have irrigated areas actually expanded around new irrigation dams?</em>, enabling analyses of irrigation expansion associated with newly constructed irrigation dams worldwide.
-        </p>
-
-        <p style="margin:10px 0 0;">
-          Resource:
-          <a href="https://zenodo.org/records/19303033" target="_blank" rel="noopener">
-            Zenodo (Dam Irrigation Expansion)
-          </a>
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>HarvestStat Africa</h2>
-
-        <p class="lede" style="margin:0;">
-          Harmonized subnational crop production, harvested area, and yield statistics across Sub-Saharan Africa.
-        </p>
-
-        <p style="margin:10px 0 0;">
-          Repository:
-          <a href="https://github.com/HarvestStat/HarvestStat-Africa" target="_blank" rel="noopener">
-            GitHub (HarvestStat-Africa)
-          </a>
-        </p>
-      </div>
-
+  <section class="index">
+    <h2>Irrigation</h2>
+    <div class="body">
+      <article class="dataset">
+        <h3>MIRCA-OS</h3>
+        <p>Monthly irrigated and rainfed cropped areas worldwide through the 21st century.</p>
+        <p><a href="https://www.hydroshare.org/resource/60a890eb841c460192c03bb590687145/">Download from HydroShare</a> <span class="meta">or read the <a href="https://doi.org/10.1038/s41597-024-04313-w">Scientific Data paper</a></span></p>
+      </article>
+      <article class="dataset">
+        <h3>GMIA-NEXT</h3>
+        <p>Next-generation global map of irrigated areas at 30&nbsp;m resolution, with irrigation probability and binary irrigated/non-irrigated maps for the 2023/24 growing season.</p>
+        <p><a href="https://zenodo.org/records/17627111">Download from Zenodo</a> <span class="meta">or read the <a href="https://doi.org/10.21203/rs.3.rs-10085674/v2">preprint</a></span></p>
+      </article>
+      <article class="dataset">
+        <h3>Area Equipped for Irrigation (AEI)</h3>
+        <p>Annual global extent of area equipped for irrigation, from 2000 onward.</p>
+        <p><a href="https://zenodo.org/records/17766364">Download from Zenodo</a></p>
+      </article>
+      <article class="dataset">
+        <h3>Irrigation expansion around new dams</h3>
+        <p>Accompanies the study <em>Have irrigated areas actually expanded around new irrigation dams?</em> and supports analysis of irrigation change near newly built irrigation dams worldwide.</p>
+        <p><a href="https://zenodo.org/records/19303033">Download from Zenodo</a></p>
+      </article>
     </div>
+  </section>
 
-  </div>
+  <section class="index">
+    <h2>Crop statistics</h2>
+    <div class="body">
+      <article class="dataset">
+        <h3>HarvestStat Africa</h3>
+        <p>Harmonized subnational crop production, harvested area, and yield statistics across Sub-Saharan Africa.</p>
+        <p><a href="https://github.com/HarvestStat/HarvestStat-Africa">View on GitHub</a> <span class="meta">or read the <a href="https://doi.org/10.1038/s41597-025-05001-z">Scientific Data paper</a></span></p>
+      </article>
+    </div>
+  </section>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    © 2026 Endalkachew Abebe Kebede
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Endalkachew Abebe Kebede</span>
+    <span><a href="mailto:endiabe@udel.edu">endiabe@udel.edu</a></span>
   </div>
 </footer>
-
 </body>
 </html>
